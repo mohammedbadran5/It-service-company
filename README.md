@@ -4,3 +4,5 @@
 ![screencapture-localhost-3001-about-2024-10-11-18_21_07](https://github.com/user-attachments/assets/457b23b3-5cd9-48d1-8826-6ded3f3dcecf)
 
 ![screencapture-localhost-3001-project-2024-10-11-18_21_17](https://github.com/user-attachments/assets/da7add06-013a-40a2-8bae-a45ae8053c81)
+
+![screencapture-localhost-3001-contact-2024-10-11-18_21_26](https://github.com/user-attachments/assets/9226f2b2-4446-4f4a-ae47-70ec0d3b754d)
