@@ -1,0 +1,198 @@
+@import "../../assets/scss/constants.scss";
+@import "../../assets/scss/repeated-codes.scss";
+
+.contacts {
+  padding: 10rem calc($c * 10);
+  display: flex;
+  flex-flow: row wrap;
+  gap: calc($c * 7);
+
+  @media only screen and (max-width: 1300px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 750px) {
+    padding: 10rem 50px 5rem 50px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    padding: 10rem 20px 5rem 20px;
+  }
+
+  .contact__info {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+
+    @media only screen and (max-width: 750px) {
+      align-items: center;
+    }
+
+    h1 {
+      color: $light-black;
+      font-family: $head-font-family;
+      font-weight: $head-font-weight-600;
+      font-size: 64px;
+
+      @media only screen and (max-width: 750px) {
+        font-size: 50px;
+      }
+
+      @media only screen and (max-width: 400px) {
+        font-size: 40px;
+      }
+    }
+
+    p {
+      color: $light-black;
+      font-family: $body-font-family;
+      font-family: $body-font-weight-400;
+      font-size: 18px;
+      letter-spacing: 0.54px;
+
+      @media only screen and (max-width: 750px) {
+        text-align: center;
+      }
+    }
+
+    .contact__contacts {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 20px;
+
+      .contact__aContact {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 26px;
+        align-items: center;
+        cursor: pointer;
+
+        h2 {
+          color: $light-black;
+          font-family: $head-font-family;
+          font-family: $head-font-weight-600;
+          font-size: 20px;
+        }
+
+        p {
+          color: $light-black;
+          font-family: $body-font-family;
+          font-family: $body-font-weight-400;
+          font-size: 16px;
+          letter-spacing: 0.48px;
+        }
+      }
+    }
+
+    .contact__hLine {
+      width: 100%;
+      height: 1px;
+      background-color: $gray;
+    }
+
+    .contact__icons {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 30px;
+      margin-top: -25px;
+    }
+  }
+
+  .contact__inputs {
+    flex: 2;
+    padding: 45px;
+    display: flex;
+    flex-flow: column;
+    gap: 52px;
+    background-color: $light-gray;
+    border-radius: 20px;
+
+    @media only screen and (max-width: 1300px) {
+      width: 100%;
+    }
+
+    .contact__twoInputs {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 60px;
+
+      @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    .contact__input {
+      display: flex;
+      flex-flow: column;
+      gap: 10px;
+      transition: $transition1;
+    }
+
+    .contact__twoInputs--width {
+      flex: 1;
+    }
+
+    .btn {
+      flex: none;
+    }
+
+    input {
+      width: 100%;
+      height: 50px;
+      padding: 0 10px;
+      color: $light-black;
+      font-size: 1rem;
+      font-family: $body-font-family;
+      font-weight: $body-font-weight-400;
+      transition: $transition1;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-radius: 0;
+      border-bottom: 1px solid rgb(200, 200, 200);
+
+      &:focus {
+        box-shadow: 0 0 5px rgb(200, 200, 200);
+        border: 1px solid rgb(200, 200, 200);
+        border-radius: 5px;
+      }
+    }
+
+    label {
+      color: $light-black;
+      font-family: $body-font-family;
+      font-weight: $body-font-weight-400;
+      font-size: 18px;
+      letter-spacing: 0.54px;
+    }
+
+    @media only screen and (max-width: 1300px) {
+      .contacts__btnWrapper {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.map {
+  margin: 0 calc($c * 10) 10rem calc($c * 10);
+  border-radius: 20px;
+  cursor: pointer;
+
+  @media only screen and (max-width: 750px) {
+    margin: 0 50px 5rem 50px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    margin: 0 20px 5rem 20px;
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

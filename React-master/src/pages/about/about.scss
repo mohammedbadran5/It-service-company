@@ -1,0 +1,573 @@
+@import "../../assets/scss/constants.scss";
+@import "../../assets/scss/repeated-codes.scss";
+
+.about {
+  width: 100%;
+  height: fit-content;
+}
+
+.aboutUsHero {
+  width: 100%;
+  padding: 6.25rem 0;
+
+  .aboutUsHero__upper-part {
+    height: fit-content;
+    margin: 0 calc($c * 10) 12rem calc($c * 10);
+    padding: 5.5rem 4.5rem;
+    background-color: $black;
+    border-radius: 1.125rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+
+    @media only screen and (max-width: 1300px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 50px;
+      padding: 5.5rem 20px;
+    }
+
+    @media only screen and (max-width: 700px) {
+      margin: 0 20px 12rem 20px;
+    }
+
+    .aboutUsHero__text {
+      flex: 1;
+
+      @media only screen and (max-width: 1300px) {
+        margin-top: -650px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+      }
+
+      @media only screen and (max-width: 1300px) {
+        margin-top: -600px;
+      }
+
+      @media only screen and (max-width: 950px) {
+        margin-top: -500px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        margin-top: -400px;
+      }
+
+      @media only screen and (max-width: 400px) {
+        margin-top: -350px;
+      }
+
+      h1 {
+        font-family: $head-font-family;
+        font-weight: $head-font-weight-600;
+        font-size: calc($c * 2);
+        color: $light-gray;
+        margin-bottom: 1.5rem;
+
+        @media only screen and (max-width: 1300px) {
+          text-align: center;
+        }
+
+        span {
+          color: $light-green;
+        }
+      }
+
+      p {
+        color: $light-gray;
+        font-family: $body-font-family;
+        font-weight: $body-font-weight-400;
+        font-size: 1.125rem;
+        letter-spacing: 0.54px;
+
+        @media only screen and (max-width: 1300px) {
+          text-align: center;
+        }
+      }
+
+      .aboutUsHero__testimonial {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2.5rem;
+
+        img {
+          width: 70px;
+          height: 70px;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        p {
+          color: #fff;
+          font-family: $body-font-family;
+          font-weight: $body-font-weight-400;
+          font-size: 1.25rem;
+        }
+
+        .aboutUsHero__image-related-rating {
+          display: flex;
+          flex-flow: row nowrap;
+          gap: 0.125rem;
+          margin-top: 0.2rem;
+
+          img {
+            width: 1.25rem;
+            height: 1.25rem;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+
+    .aboutUsHero__photos {
+      flex: 1;
+      position: relative;
+      z-index: 50;
+
+      @media only screen and (max-width: 1300px) {
+        position: static;
+        display: flex;
+        flex-flow: column;
+      }
+
+      .fChild {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: calc($c * 17.5);
+        height: calc($c * 17.5);
+        z-index: 100;
+
+        @media only screen and (max-width: 1300px) {
+          position: static;
+          transform: translateX(-10%);
+        }
+      }
+
+      .sChild {
+        position: absolute;
+        top: 7%;
+        left: 10%;
+
+        width: calc($c * 17.5);
+        height: calc($c * 17.5);
+        z-index: 200;
+
+        @media only screen and (max-width: 1300px) {
+          position: static;
+          top: 0;
+          left: 0;
+          transform: translateY(-90%);
+        }
+      }
+
+      .tChild {
+        position: absolute;
+        top: 14%;
+        left: 20%;
+
+        width: calc($c * 17.5);
+        height: calc($c * 17.5);
+        z-index: 300;
+
+        @media only screen and (max-width: 1300px) {
+          position: static;
+          top: 0;
+          left: 0;
+          transform: translateY(-180%) translateX(10%);
+        }
+      }
+    }
+  }
+
+  .aboutUsHero__lower-part {
+    margin: 0 calc($c * 10);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+
+    @media only screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    @media only screen and (max-width: 700px) {
+      margin: 0 20px;
+    }
+
+    .aService {
+      width: 23.75rem;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      @media only screen and (max-width: 400px) {
+        width: 100%;
+      }
+
+      h1 {
+        color: $black;
+        font-family: $head-font-family;
+        font-weight: $head-font-weight-600;
+        font-size: 2.875rem;
+        text-align: center;
+      }
+
+      h2 {
+        color: $black;
+        text-align: center;
+        font-family: $body-font-family;
+        font-weight: $head-font-weight-500;
+        font-size: 1.625rem;
+        letter-spacing: 0.75px;
+      }
+
+      p {
+        color: $light-black;
+        text-align: center;
+        font-family: $body-font-family;
+        font-weight: $body-font-weight-400;
+        font-size: 1.125rem;
+        letter-spacing: 0.54px;
+      }
+    }
+  }
+}
+
+.mission {
+  margin: 5rem 0;
+  padding: 6.25rem calc($c * 9);
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  background-color: $black;
+
+  @media only screen and (max-width: 1450px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 6.25rem 20px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding-bottom: 100px;
+  }
+
+  .mission__left-part {
+    flex: 1;
+
+    @media only screen and (max-width: 1450px) {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    h2 {
+      color: $light-green;
+      font-weight: $head-font-family;
+      font-family: $head-font-weight-700;
+      font-size: 1.625rem;
+    }
+
+    h1 {
+      color: $light-gray;
+      font-weight: $head-font-family;
+      font-family: $head-font-weight-600;
+      font-size: 4rem;
+      margin-top: 1.5rem;
+
+      @media only screen and (max-width: 1450px) {
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      color: $light-gray;
+      font-family: $body-font-family;
+      font-family: $body-font-weight-400;
+      font-size: 1.125rem;
+      letter-spacing: 0.54px;
+      margin-top: 2rem;
+
+      @media only screen and (max-width: 1450px) {
+        text-align: center;
+      }
+    }
+
+    .mission__ticks {
+      margin-top: 3rem;
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 1.5rem;
+
+      @media only screen and (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .aTick {
+        max-width: 16.25rem;
+        display: flex;
+        flex-flow: row nowrap;
+        margin-top: 0.625rem;
+        align-items: flex-start;
+        gap: 0.5rem;
+
+        p {
+          color: $light-gray;
+          font-family: $body-font-family;
+          font-weight: $body-font-weight-400;
+          font-size: 1.125rem;
+          letter-spacing: 0.54px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .mission__right-part {
+    flex: 1;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+
+    @media only screen and (max-width: 500px) {
+      padding-bottom: 200px;
+    }
+
+    .mission__right-img-block {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      gap: 2.25rem;
+
+      @media only screen and (max-width: 1900px) {
+        align-items: center;
+      }
+
+      img {
+        width: 330px;
+        height: 450px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 1.125rem;
+      }
+
+      @media only screen and (max-width: 500px) {
+        width: 230px;
+        height: 350px;
+      }
+
+      .mission__right-img-texts {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1.625rem;
+
+        @media only screen and (max-width: 400px) {
+          width: 100%;
+          gap: 10px;
+        }
+
+        .fText,
+        .rText {
+          width: 10rem;
+        }
+
+        .rText {
+          padding-top: 5rem;
+          padding-left: 3rem;
+
+          @media only screen and (max-width: 500px) {
+            padding-top: 0;
+            padding-left: 0;
+          }
+        }
+
+        h2 {
+          color: $light-gray;
+          font-family: $head-font-family;
+          font-size: 2.875rem;
+          font-weight: $head-font-weight-700;
+          text-align: center;
+        }
+
+        .verticle-line {
+          width: 1px;
+          height: 124px;
+          background-color: $light-gray;
+        }
+
+        p {
+          color: $light-gray;
+          text-align: center;
+          font-family: $body-font-family;
+          font-size: 1rem;
+          font-weight: $body-font-weight-400;
+          letter-spacing: 0.48px;
+          margin-top: 1rem;
+          text-wrap: wrap;
+        }
+      }
+    }
+
+    .mission__left-img-block {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+
+      @media only screen and (max-width: 1900px) {
+        display: none;
+      }
+
+      .mission_team-members {
+        margin-top: 5rem;
+        margin-left: -4.5rem;
+        width: 200px;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: $light-gray;
+
+        p {
+          color: $light-black;
+          text-align: center;
+          font-family: $body-font-family;
+          font-family: $body-font-weight-400;
+          font-size: 1.125rem;
+          font-weight: 400;
+          letter-spacing: 0.54px;
+        }
+
+        .team-member-imgs {
+          width: 100%;
+          margin-top: 0.625rem;
+          display: flex;
+          flex-flow: row nowrap;
+
+          img {
+            width: 40px;
+            height: 40px;
+            margin-right: -1rem;
+          }
+        }
+      }
+
+      .bigImg {
+        width: 285px;
+        height: 345px;
+        margin-top: 13rem;
+      }
+    }
+  }
+}
+
+.team {
+  margin: 0 calc($c * 10) 6.25rem calc($c * 10);
+
+  @media only screen and (max-width: 700px) {
+    margin: 0 20px 6.25rem 20px;
+  }
+
+  h1 {
+    color: $black;
+    text-align: center;
+    font-family: $head-font-family;
+    font-family: $head-font-weight-600;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: 1500px) {
+      font-size: 3rem;
+    }
+  }
+
+  .team__team-members {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4.625rem;
+
+    @media only screen and (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .team__aMember {
+      position: relative;
+      max-width: 400px;
+
+      @media only screen and (max-width: 700px) {
+        width: 100%;
+      }
+
+      .team__icons {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 15px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        .team__icon {
+          width: 30px;
+          height: 30px;
+          background-color: rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          display: grid;
+          place-content: center;
+          cursor: pointer;
+          transition: $transition1;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+
+          &:hover {
+            scale: 1.2;
+            background-color: transparent;
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+      }
+
+      h2 {
+        color: $black;
+        font-family: $head-font-family;
+        font-family: $head-font-weight-600;
+        font-size: 20px;
+        margin-top: 1rem;
+      }
+
+      p {
+        color: $light-black;
+        font-weight: $body-font-weight-400;
+        font-weight: $body-font-family;
+        font-size: 16px;
+        letter-spacing: 0.48px;
+        margin-top: 0.625rem;
+      }
+    }
+  }
+}

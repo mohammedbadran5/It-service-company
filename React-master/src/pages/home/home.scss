@@ -1,0 +1,749 @@
+@import "../../assets/scss/constants.scss";
+@import "../../assets/scss/repeated-codes.scss";
+
+.hero {
+  width: 100%;
+  height: fit-content;
+  padding: 7rem 0;
+  background: url("../../../public/assets/hero-bg.png"),
+    rgba(0, 0, 0, 0.95) -330px -180px / 135% 130% no-repeat;
+  position: relative;
+  z-index: -100;
+
+  .gradient {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 1rem;
+    right: calc($c * 3.45);
+    background-image: url("../../../public/assets/gradient.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -50;
+
+    @media only screen and (max-width: 1550px) {
+      display: none;
+    }
+  }
+
+  .hero__upper-part {
+    display: flex;
+    flex-flow: row wrap;
+
+    @media only screen and (max-width: 1200px) {
+      flex-flow: column-reverse;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero__text {
+      flex: 1;
+      margin-top: 50px;
+      padding-left: calc($c * 10);
+
+      @media only screen and (max-width: 1200px) {
+        width: 100%;
+        padding-left: 0;
+        display: flex;
+        flex-flow: column;
+        gap: 20px;
+        align-items: center;
+      }
+
+      h1 {
+        width: calc($c * 18.75);
+        font-family: $head-font-family;
+        font-weight: $head-font-weight-600;
+        font-size: calc($c * 2.1);
+        color: $light-gray;
+
+        @media only screen and (max-width: 1200px) {
+          width: 100%;
+          text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+          font-size: 32px;
+          padding: 0 20px;
+        }
+
+        span {
+          color: $light-green;
+        }
+      }
+
+      p {
+        width: calc($c * 18.75);
+        color: $light-gray;
+        font-family: $body-font-family;
+        font-size: 1.125rem;
+        font-weight: $body-font-weight-400;
+        letter-spacing: 0.54px;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+
+        @media only screen and (max-width: 1200px) {
+          width: 100%;
+          padding: 0 calc($c * 10);
+          text-align: center;
+        }
+
+        @media only screen and (max-width: 750px) {
+          padding: 0 20px;
+        }
+      }
+    }
+
+    .hero__photo {
+      flex: 1;
+      margin-top: 5rem;
+      margin-right: 10rem;
+      display: grid;
+      place-content: center;
+
+      @media only screen and (max-width: 1200px) {
+        margin: 0;
+      }
+
+      img {
+        width: 400px;
+        height: 400px;
+        flex-shrink: 0;
+        border-radius: 400px;
+        box-shadow: 0px 0px 20px 20px rgba(100, 204, 197, 0.05);
+
+        @media only screen and (max-width: 600px) {
+          width: 300px;
+          height: 300px;
+        }
+
+        @media only screen and (max-width: 350px) {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  .hero__brands {
+    padding-left: calc($c * 10);
+    margin-top: 5rem;
+
+    @media only screen and (max-width: 1200px) {
+      padding: 0;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    h2 {
+      color: $light-green;
+      font-family: $head-font-family;
+      font-size: 1.25rem;
+      font-weight: $head-font-weight-600;
+      padding: 0 20px;
+
+      @media only screen and (max-width: 1200px) {
+        text-align: center;
+      }
+    }
+
+    .hero__brands-logos {
+      margin-top: 1rem;
+      padding: 0 1rem;
+      margin-left: -1rem;
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0.625rem;
+
+      @media only screen and (max-width: 750px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+.services {
+  margin: 7rem calc($c * 10);
+
+  @media only screen and (max-width: 700px) {
+    margin: 7rem 20px;
+  }
+
+  h2 {
+    color: $light-green;
+    font-family: $head-font-family;
+    font-weight: $head-font-weight-600;
+    text-align: center;
+    font-size: 1.875rem;
+    padding: 0 20px;
+  }
+
+  h1 {
+    max-width: 43.75rem;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: $black;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-family: $head-font-family;
+    font-weight: $head-font-weight-600;
+    font-size: calc($c * 2);
+
+    @media only screen and (max-width: 1000px) {
+      font-size: 38px;
+    }
+  }
+
+  .services__grid {
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 5rem;
+    column-gap: 4rem;
+
+    @media only screen and (max-width: 1400px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: calc($c * 2);
+    }
+
+    @media only screen and (max-width: 1000px) {
+      display: flex;
+      flex-flow: column;
+      gap: 40px;
+    }
+
+    .services__aService {
+      background-color: $light-gray;
+      padding: 2.5rem;
+      border-radius: 1.25rem;
+      cursor: pointer;
+      transition: $transition1;
+
+      @media only screen and (max-width: 350px) {
+        padding: 20px;
+      }
+
+      h3 {
+        color: $black;
+        font-family: $head-font-family;
+        font-weight: $head-font-weight-500;
+        font-size: 25px;
+        margin-top: 3.875rem;
+
+        @media only screen and (max-width: 350px) {
+          margin-top: 40px;
+        }
+      }
+
+      p {
+        color: $black;
+        font-family: $body-font-family;
+        font-weight: $body-font-weight-400;
+        font-size: 1.125rem;
+        letter-spacing: 0.54px;
+        margin-top: 1rem;
+      }
+
+      &:hover {
+        background-color: $gray;
+        box-shadow: 0 0 50px rgba(128, 128, 128, 0.3);
+      }
+    }
+  }
+}
+
+.aboutUs {
+  padding: 6.25rem calc($c * 10);
+  width: 100%;
+  height: 56.25rem;
+  background-color: $black;
+  display: flex;
+  flex-flow: row wrap;
+
+  @media only screen and (max-width: 1600px) {
+    height: fit-content;
+    flex-flow: column;
+    gap: 50px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 6.25rem 20px;
+  }
+
+  .aboutUs__images {
+    flex: 1;
+    position: relative;
+    z-index: 50;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .imageWrapper {
+      position: relative; // Relative position for each image wrapper
+      width: calc($c * 17.5); // Set a common size for all wrappers
+      height: calc($c * 17.5);
+
+      .fChild {
+        position: absolute; // Positioned absolutely for overlap
+        top: 0;
+        left: 0;
+        z-index: 3; // Highest z-index
+        width: 100%; // Responsive to the wrapper size
+        height: 100%; // Responsive to the wrapper size
+      }
+
+      .sChild {
+        position: absolute;
+        top: 10%; // Slight overlap
+        left: 10%; // Slight overlap
+        z-index: 2; // Lower z-index
+        width: 90%; // Adjust size to make it smaller than the fChild
+        height: 90%; // Adjust size to make it smaller than the fChild
+      }
+
+      .tChild {
+        position: absolute;
+        top: 20%; // More overlap
+        left: 20%; // More overlap
+        z-index: 1; // Lowest z-index
+        width: 80%; // Adjust size to make it smaller than the sChild
+        height: 80%; // Adjust size to make it smaller than the sChild
+      }
+    }
+
+    @media only screen and (max-width: 700px) {
+      .imageWrapper {
+        width: 350px;
+        height: 350px;
+
+        .fChild,
+        .sChild,
+        .tChild {
+          width: 100%; // Ensure full width in smaller screens
+          height: 100%; // Ensure full height in smaller screens
+        }
+      }
+    }
+
+    @media only screen and (max-width: 450px) {
+      .imageWrapper {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    @media only screen and (max-width: 320px) {
+      .imageWrapper {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+
+  .aboutUs__info {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+    margin-left: 200px;
+    justify-content: center;
+
+    h2 {
+      color: $light-green;
+      font-family: $head-font-family;
+      font-weight: $head-font-weight-600;
+      font-size: 1.875rem;
+    }
+
+    h1 {
+      width: 36.625rem;
+      color: $white;
+      font-family: $head-font-family;
+      font-weight: $head-font-weight-600;
+      font-size: calc($c * 1.75);
+      text-wrap: wrap;
+
+      @media only screen and (max-width: 1600px) {
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 700px) {
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+
+    .aboutUs__long-text {
+      width: 36.625rem;
+      color: $white;
+      font-family: $body-font-family;
+      font-weight: $body-font-weight-400;
+      font-size: 1.125rem;
+      letter-spacing: 0.54px;
+      line-height: 1.5;
+
+      @media only screen and (max-width: 1600px) {
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 700px) {
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+
+    .aboutUs__numbers {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 3.75rem;
+
+      @media only screen and (max-width: 400px) {
+        flex-flow: column;
+        gap: 2rem;
+      }
+
+      .bigNumber {
+        color: $light-green;
+        font-family: $head-font-family;
+        font-weight: $head-font-weight-600;
+        font-size: 2.875rem;
+      }
+
+      .smallNumber {
+        color: $white;
+        font-weight: $body-font-family;
+        font-weight: $body-font-weight-400;
+        font-size: 1rem;
+        letter-spacing: 0.48px;
+        margin-top: 0.625rem;
+      }
+    }
+  }
+}
+
+.process {
+  margin: 7rem calc($c * 10) 10rem calc($c * 10);
+
+  @media only screen and (max-width: 700px) {
+    margin: 7rem 20px;
+  }
+
+  h2 {
+    color: $light-green;
+    font-family: $head-font-family;
+    font-weight: $head-font-weight-600;
+    text-align: center;
+    font-size: 1.875rem;
+  }
+
+  h1 {
+    max-width: 43.75rem;
+    margin: 0 auto;
+    color: $black;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-family: $head-font-family;
+    font-weight: $head-font-weight-600;
+    font-size: calc($c * 2);
+
+    @media only screen and (max-width: 700px) {
+      width: 100%;
+      font-size: 36px;
+    }
+  }
+
+  .process__flex {
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8rem;
+    justify-content: center;
+
+    @media only screen and (max-width: 1700px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 50px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      display: flex;
+      flex-flow: column;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .process__aProcess {
+      width: 17%;
+      position: relative;
+
+      @media only screen and (max-width: 1700px) {
+        width: 100%;
+        display: grid;
+        place-content: center;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        border: 2px solid $gray;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .process__icon-title-div {
+        width: fit-content;
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1.75rem;
+        align-items: center;
+
+        h3 {
+          color: $light-black;
+          font-family: $head-font-family;
+          font-weight: $head-font-weight-600;
+          font-size: 1.875rem;
+        }
+      }
+
+      p {
+        width: 12rem;
+        color: $light-black;
+        font-family: $body-font-family;
+        font-family: $body-font-weight-400;
+        font-size: 1rem;
+        letter-spacing: 0.48px;
+        margin-top: 2rem;
+      }
+
+      .wrapper {
+        position: absolute;
+        top: 20%;
+        left: -15%;
+        z-index: -100;
+
+        @media only screen and (max-width: 1700px) {
+          left: 20%;
+        }
+
+        @media only screen and (max-width: 1500px) {
+          left: 17%;
+        }
+
+        @media only screen and (max-width: 1350px) {
+          left: 10%;
+        }
+
+        @media only screen and (max-width: 1150px) {
+          left: 5%;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          display: none;
+        }
+      }
+
+      .arrow {
+        position: absolute;
+        top: 63%;
+        right: -38%;
+        z-index: -100;
+
+        @media only screen and (max-width: 1900px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.showcases {
+  margin: 6.25rem calc($c * 10);
+
+  @media only screen and (max-width: 700px) {
+    margin: 6.25rem 20px;
+  }
+
+  h2 {
+    color: $black;
+    font-family: $head-font-family;
+    font-weight: $head-font-weight-600;
+    font-size: calc($c * 2);
+    text-align: center;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 40px;
+    }
+
+    @media only screen and (max-width: 700px) {
+      font-size: 30px;
+    }
+  }
+
+  .showcases__flexbox {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 5.375rem;
+    gap: calc($c * 2.25);
+
+    @media only screen and (max-width: 1024px) {
+      margin-top: 3rem;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    @media only screen and (max-width: 700px) {
+      margin-top: 2rem;
+      gap: 2rem;
+    }
+
+    .showcases__left-part,
+    .showcases__right-part {
+      flex: 1;
+      display: flex;
+      flex-flow: column;
+      gap: 5.5rem;
+
+      @media only screen and (max-width: 1024px) {
+        flex-flow: column-reverse;
+        gap: 3rem;
+      }
+
+      @media only screen and (max-width: 700px) {
+        gap: 2rem;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 1.25rem;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      h3 {
+        color: $black;
+        font-family: $head-font-family;
+        font-weight: $head-font-weight-600;
+        font-size: 1.875rem;
+        margin-top: 0.625rem;
+
+        @media only screen and (max-width: 700px) {
+          font-size: 25px;
+        }
+      }
+
+      p {
+        margin-top: 0.625rem;
+        color: $light-black;
+        font-family: $body-font-family;
+        font-family: $body-font-weight-400;
+        font-size: 1.125rem;
+        letter-spacing: 0.54px;
+
+        @media only screen and (max-width: 700px) {
+          font-size: 1rem;
+        }
+      }
+
+      .showcases__btn {
+        text-align: right;
+        margin-top: 5rem;
+        margin-bottom: -3rem;
+        display: flex;
+        justify-content: flex-end;
+
+        @media only screen and (max-width: 1024px) {
+          margin-top: 0;
+          margin-bottom: 2rem;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.testimonial {
+  margin: 7rem calc($c * 10);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 2.25rem;
+  padding: 2.875rem;
+  border-radius: 1.25rem;
+  background-color: $light-gray;
+
+  @media only screen and (max-width: 700px) {
+    margin: 7rem 20px;
+    padding: 30px;
+  }
+
+  img {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  h2 {
+    color: $black;
+    text-align: center;
+    font-family: $head-font-family;
+    font-weight: $head-font-weight-700;
+    font-size: 1.563rem;
+  }
+
+  h3 {
+    color: $black;
+    font-family: $head-font-family;
+    font-weight: $head-font-weight-600;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  p {
+    color: $light-black;
+    text-align: center;
+    font-family: $body-font-family;
+    font-family: $body-font-weight-400;
+    font-size: 1rem;
+    letter-spacing: 0.48px;
+    margin-top: 0.5rem;
+  }
+
+  .testimonial__btns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 0.75rem;
+
+    img {
+      margin: 0;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      transition: $transition1;
+      border: 2px solid $black;
+      cursor: pointer;
+
+      &:hover {
+        scale: 1.2;
+        border-color: $white;
+      }
+    }
+  }
+}

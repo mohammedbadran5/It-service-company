@@ -1,0 +1,14 @@
+@import "../../assets/scss/constants.scss";
+
+.logo {
+    display: flex;
+    cursor: pointer;
+
+    p {
+        font-family: $head-font-family;
+        font-weight: $head-font-weight-600;
+        font-size: 30px;
+        padding-top: 2px;
+        padding-left: 5px;
+    }
+}

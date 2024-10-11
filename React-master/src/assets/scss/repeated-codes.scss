@@ -1,0 +1,48 @@
+@import "./constants.scss";
+
+@mixin OverlayImages($sTop, $sLeft, $tTop, $tLeft) {
+  .fChild {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: calc($c * 17.5);
+    height: calc($c * 17.5);
+    z-index: 100;
+  }
+
+  .sChild {
+    position: absolute;
+    top: $sTop;
+    left: $sLeft;
+
+    width: calc($c * 17.5);
+    height: calc($c * 17.5);
+    z-index: 200;
+  }
+
+  .tChild {
+    position: absolute;
+    top: $tTop;
+    left: $tLeft;
+
+    width: calc($c * 17.5);
+    height: calc($c * 17.5);
+    z-index: 300;
+  }
+}
+
+@mixin AnchorsStyle {
+  .header__anchors {
+    text-decoration: none;
+    font-family: $body-font-family;
+    font-size: 1.25rem;
+    font-weight: $body-font-weight-400;
+    cursor: pointer;
+    transition: $transition1;
+
+    &:hover {
+      color: $gray !important;
+    }
+  }
+}

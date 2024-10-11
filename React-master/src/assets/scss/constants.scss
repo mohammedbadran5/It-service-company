@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,600;8..144,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&display=swap");
+
+/* COLORS */
+$black: #0c0c0c;
+$white: #fff;
+$gray: #dfdfdf;
+$light-black: rgba(18, 18, 18, 0.9);
+$light-gray: #f4f4f4;
+$light-green: #64ccc5;
+
+/* FONTS */
+$head-font-family: "Roboto Serif";
+$head-font-weight-500: 500;
+$head-font-weight-600: 600;
+$head-font-weight-700: 700;
+$body-font-family: "DM Sans";
+$body-font-weight-400: 400;
+
+/* TRANSITIONS */
+$transition1: all 0.3s;
+
+$c: calc(1vw + 1vh); // this coefficient is used for dynamic reponsibility;
+
+// 1$c === 32.5px
+// 1$c === 2.031rem
+
+/* 
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+*/

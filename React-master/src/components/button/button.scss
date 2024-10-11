@@ -1,0 +1,24 @@
+@import "../../assets/scss/constants.scss";
+
+.btn {
+    height: 47px;
+    padding: 8px 15px;
+    border-radius: 23px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: $body-font-family;
+    font-weight: $body-font-weight-400;
+    font-size: 1.125rem;
+    letter-spacing: 0.54px;
+    transition: $transition1;
+
+    &:hover {
+        background-color: $gray !important;
+        color: $light-black !important;
+    }
+
+    &:active {
+        background-color: $light-green !important;
+    }
+}

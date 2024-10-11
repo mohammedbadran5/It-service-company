@@ -1,0 +1,23 @@
+@import "../../assets/scss/constants.scss";
+
+.page404 {
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  place-content: center;
+
+  h1 {
+    color: darkred;
+    font-size: calc($c * 6);
+    text-align: center;
+    font-weight: 900;
+    font-family: $head-font-family;
+  }
+
+  p {
+    font-size: calc($c * 3);
+    text-align: center;
+    font-weight: 900;
+    font-family: $head-font-family;
+  }
+}

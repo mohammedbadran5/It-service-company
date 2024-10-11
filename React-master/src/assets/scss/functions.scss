@@ -1,0 +1,18 @@
+@function Media_Query($breakpoint) {
+}
+
+@function generate-media-query($breakpoint) {
+  $breakpoints: (
+    small: "max-width: 600px",
+    medium: "min-width: 601px and max-width: 1024px",
+    large: "min-width: 1025px" // Add more breakpoints as needed,
+  );
+
+  // Check if the provided breakpoint exists
+  @if map-has-key($breakpoints, $breakpoint) {
+    @return "only screen and (#{$breakpoints[$breakpoint]})";
+  } @else {
+    @warn "Invalid breakpoint: #{$breakpoint}. Valid values are 'small', 'medium', 'large', etc.";
+    @return null;
+  }
+}

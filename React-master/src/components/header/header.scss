@@ -1,0 +1,78 @@
+@import "../../assets/scss/constants.scss";
+@import "../../assets/scss/repeated-codes.scss";
+
+.header {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  padding: 0 calc($c * 10);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 0;
+
+  @media only screen and (max-width: 600px) {
+    padding: 0 20px;
+  }
+
+  .header__logoWrapper {
+    z-index: 10;
+  }
+
+  .header__nav {
+    width: 25rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1150px) {
+      width: 20rem;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+
+    @include AnchorsStyle;
+  }
+
+  .header__mobileNav {
+    display: none;
+    width: 100%;
+    flex-flow: column;
+    gap: 10px;
+    align-items: center;
+    background-color: $light-green;
+    padding: 80px 0 20px 0;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 5;
+
+    @media only screen and (max-width: 1024px) {
+      display: flex;
+    }
+
+    @include AnchorsStyle;
+  }
+
+  .mobileNav__menuWrapper {
+    display: none;
+    z-index: 10;
+
+    @media only screen and (max-width: 1024px) {
+      display: block;
+    }
+
+    img {
+      transition: transform 1s ease;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .header__btnWrapper {
+      display: none;
+    }
+  }
+}

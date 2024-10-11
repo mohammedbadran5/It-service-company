@@ -1,0 +1,30 @@
+@import "../../assets/scss/constants.scss";
+@import "../../assets/scss/repeated-codes.scss";
+
+.parent {
+  width: 100%;
+  margin-top: 100px;
+  padding: 45px 20px;
+  border-radius: 20px;
+  background-image: url("../../../public/assets/enough-talk-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  h2 {
+    color: $light-gray;
+    font-family: $head-font-family;
+    font-family: $head-font-weight-700;
+    font-size: 45px;
+    text-align: center;
+    line-height: 1.5;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 30px;
+    }
+  }
+}

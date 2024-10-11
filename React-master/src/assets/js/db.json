@@ -1,0 +1,80 @@
+{
+  "services": [
+    {
+      "icon": "pen",
+      "title": "Content Marketing",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+    },
+    {
+      "icon": "figma",
+      "title": "Graphic Design",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+    },
+    {
+      "icon": "speaker",
+      "title": "Digital Marketing",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+    },
+    {
+      "icon": "color-pen",
+      "title": "Web Design",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+    },
+    {
+      "icon": "person-speaker",
+      "title": "IT Consulting",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+    },
+    {
+      "icon": "diamond",
+      "title": "Brand Identity",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+    }
+  ],
+  "processes": [
+    {
+      "icon": "light-ball",
+      "title": "Ideate",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+    },
+    {
+      "icon": "email",
+      "title": "Research",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+    },
+    {
+      "icon": "settings",
+      "title": "Create",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+    },
+    {
+      "icon": "testing",
+      "title": "Testing",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+    }
+  ],
+  "showcases1": [
+    {
+      "photo": "photo1",
+      "title": "Web UI design",
+      "text": "Creative UI design"
+    },
+    {
+      "photo": "photo3",
+      "title": "UI Design",
+      "text": "Creative Rebranding for logo"
+    }
+  ],
+  "showcases2": [
+    {
+      "photo": "photo2",
+      "title": "To design Digital Strategy",
+      "text": "Social Media Marketing"
+    },
+    {
+      "photo": "photo4",
+      "title": "UI Design",
+      "text": "Creative Rebranding for logo"
+    }
+  ]
+}

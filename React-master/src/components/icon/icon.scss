@@ -1,0 +1,13 @@
+@import "../../assets/scss/constants.scss";
+
+.icon {
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transition: $transition1;
+
+    &:hover {
+        scale: 1.1;
+    }
+}
